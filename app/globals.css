@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0d9488;
-  --color-primary-hover: #0f766e;
+  --color-primary: #4a684c;
+  --color-primary-hover: #3d5a3f;
 }
 
 html {
@@ -12,5 +12,5 @@ html {
 }
 
 body {
-  @apply antialiased text-gray-800 bg-warm-50;
+  @apply antialiased text-gray-800 bg-white;
 }
