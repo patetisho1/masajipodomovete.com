@@ -158,21 +158,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Отзиви */}
-      <section id="otzivi" className="py-16 px-4 bg-gray-50 scroll-mt-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2">Отзиви</h2>
-          <span className="block w-16 h-0.5 bg-primary-500 mb-8" aria-hidden />
-          <div className="space-y-8">
-            <blockquote className="pl-4 border-l-4 border-primary-500">
-              <p className="text-gray-700">
-                Дълбокотъканният масаж, въпреки че е силов, беше съобразен с мен и моментното ми състояние. Благодаря, Тишо.
-              </p>
-              <cite className="block mt-2 text-gray-500 not-italic">— Стоян</cite>
+      {/* Отзиви – три колони един до друг */}
+      <section id="otzivi" className="py-16 px-4 bg-[#f5ede4] scroll-mt-20">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2 text-center">Отзиви</h2>
+          <span className="block w-16 h-0.5 bg-primary-500 mx-auto mb-10" aria-hidden />
+          <div className="grid sm:grid-cols-3 gap-6">
+            <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
+              <p className="text-gray-700 text-sm">Масажът беше прекрасен. И най-хубавото е, че не трябва да пътувам до вкъщи.</p>
+              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Адриана</cite>
             </blockquote>
-            <blockquote className="pl-4 border-l-4 border-primary-500">
-              <p className="text-gray-700">Ломи-Ломи е вече любимият ми масаж.</p>
-              <cite className="block mt-2 text-gray-500 not-italic">— Светла</cite>
+            <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
+              <p className="text-gray-700 text-sm">Дълбокотъканният масаж, въпреки че е силов, беше съобразен с мен и моментното ми състояние. Благодаря, Тишо.</p>
+              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Стоян</cite>
+            </blockquote>
+            <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
+              <p className="text-gray-700 text-sm">Ломи-Ломи е вече любимият ми масаж.</p>
+              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Светла</cite>
             </blockquote>
           </div>
         </div>
