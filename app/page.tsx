@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
-import { WhatsAppIcon, ViberIcon } from '@/components/MessengerIcons'
+import { WhatsAppIcon } from '@/components/MessengerIcons'
 
 // Снимки: hero – твоята снимка с камъни от public/background.jpg; За мен – about.jpg.png; Услуги – от public/
 const HERO_IMAGE = '/background.jpg'
@@ -191,7 +191,7 @@ export default function HomePage() {
             Тихомир Тодоров · 089 750 0190 · masajipodomovete@abv.bg
           </p>
           <p className="text-gray-600 mb-6">
-            Предпочитам да ме пишете в WhatsApp или Viber – отговарям по-бързо.
+            Предпочитам да ме пишете в WhatsApp – отговарям по-бързо.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             <a
@@ -202,15 +202,6 @@ export default function HomePage() {
             >
               <WhatsAppIcon className="w-5 h-5" />
               WhatsApp
-            </a>
-            <a
-              href="https://viber.com/contact?number=359897500190"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#7360f2] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 transition"
-            >
-              <ViberIcon className="w-5 h-5" />
-              Viber
             </a>
           </div>
           <div className="grid sm:grid-cols-2 gap-8">
