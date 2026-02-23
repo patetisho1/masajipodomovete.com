@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import ContactForm from '@/components/ContactForm'
 import { WhatsAppIcon } from '@/components/MessengerIcons'
 
 // Снимки: hero – твоята снимка с камъни от public/background.jpg; За мен – about.jpg.png; Услуги – от public/
@@ -232,17 +231,14 @@ export default function HomePage() {
               WhatsApp
             </a>
           </div>
-          <div className="grid sm:grid-cols-2 gap-8">
-            <div>
-              <p className="text-sm font-medium text-gray-500 mb-2">Директно</p>
-              <a href="tel:+359897500190" className="text-primary-600 hover:text-primary-700 font-medium block mb-1">
-                +359 897 500 190
-              </a>
-              <a href="mailto:masajipodomovete@abv.bg" className="text-primary-600 hover:text-primary-700 font-medium block">
-                masajipodomovete@abv.bg
-              </a>
-            </div>
-            <ContactForm />
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-2">Директно</p>
+            <a href="tel:+359897500190" className="text-primary-600 hover:text-primary-700 font-medium block mb-1">
+              +359 897 500 190
+            </a>
+            <a href="mailto:masajipodomovete@abv.bg" className="text-primary-600 hover:text-primary-700 font-medium block">
+              masajipodomovete@abv.bg
+            </a>
           </div>
         </div>
       </section>
