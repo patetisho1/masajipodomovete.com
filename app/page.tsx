@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 
-// Снимки: замени с твои в public/ (hero.jpg, about.jpg, service-1..4.jpg) или смени URL-ите
+// Снимки: замени с твои в public/ (hero.jpg, about.jpg, service-1..4.jpg) или смени URL-ите. Trigger deploy.
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1519823551278-64ac92754fb2?w=1200&q=80'
 const ABOUT_IMAGE = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80'
 const SERVICE_IMAGES = [
