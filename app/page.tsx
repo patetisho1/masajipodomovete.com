@@ -2,8 +2,8 @@ import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import { WhatsAppIcon, ViberIcon } from '@/components/MessengerIcons'
 
-// Снимки: hero – URL по-долу; За мен – public/about.jpg.png; Услуги – от public/ по име на услугата
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1519823551278-64ac92754fb2?w=1200&q=80'
+// Снимки: hero – твоята снимка с камъни от public/background.jpg; За мен – about.jpg.png; Услуги – от public/
+const HERO_IMAGE = '/background.jpg'
 const ABOUT_IMAGE = '/about.jpg.png'
 
 const SERVICES = [

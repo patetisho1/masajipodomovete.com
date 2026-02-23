@@ -12,5 +12,16 @@ html {
 }
 
 body {
-  @apply antialiased text-gray-800 bg-white;
+  @apply antialiased text-gray-800 bg-white relative;
+}
+
+/* Много леко фоново изображение за цялата страница – по-малко празно и бяло */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url(/background.jpg) center/cover no-repeat;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
 }
