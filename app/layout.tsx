@@ -11,6 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://masajipodomovete.com'),
   title: 'Масажи по домовете | София и област',
   description: 'Професионален масаж у вас вкъщи. Тихомир Тодоров – лицензиран масажист с над 10 години опит. София и област.',
   keywords: 'масаж софия, масаж по домовете, масажист софия, класически масаж, дълбокотъканен масаж',
