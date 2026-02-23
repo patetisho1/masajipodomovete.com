@@ -18,19 +18,19 @@ export default function Header() {
       <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition">
           <svg
-            className="flex-shrink-0 w-10 h-6 text-gray-800"
+            className="flex-shrink-0 w-10 h-6 text-primary-700"
             viewBox="0 0 40 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="0.75"
+            strokeWidth="0.7"
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden
           >
-            {/* Овал – ръчно, несиметричен: леко по-плосък отгоре-вляво, по-закръглен долу-вдясно */}
-            <path d="M 6.5 12 C 6.5 6 12 3.5 20 4 C 28 4.5 33.5 6.5 33.5 12 C 33.5 17.5 28 20 20 20.5 C 12 21 6.5 18 6.5 12 Z" />
-            {/* Линия – леко неравна, като от перо */}
-            <path d="M 5 12.2 L 14 11.7 L 22 12.1 L 30 11.8 L 36 12" />
+            {/* Органична форма като от Wix – неправилен овал, по-пълна долу, леко наклонена */}
+            <path d="M 7 12 C 7 6 14 4 21 4.5 C 28 5 33 8 33 13 C 33 17 29 20 22 20.5 C 15 21 7 18 7 12 Z" />
+            {/* Хоризонтална линия в долната среда на формата, леко вълниста */}
+            <path d="M 5 15.2 L 12 14.8 L 20 15.3 L 28 14.9 L 36 15.2" />
           </svg>
           <div>
             <span className="block font-serif text-xl text-gray-900">Масажи по домовете</span>
