@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #16a34a;
+  --color-primary-hover: #15803d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-gray-800 bg-white;
+}
