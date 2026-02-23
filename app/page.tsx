@@ -2,44 +2,58 @@ import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import { WhatsAppIcon, ViberIcon } from '@/components/MessengerIcons'
 
-// Снимки: hero и услуги – URL-и по-долу; За мен – твоята снимка от public/about.jpg
+// Снимки: hero – URL по-долу; За мен – public/about.jpg.png; Услуги – от public/ по име на услугата
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1519823551278-64ac92754fb2?w=1200&q=80'
 const ABOUT_IMAGE = '/about.jpg.png'
-const SERVICE_IMAGES = [
-  'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80',
-  'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80',
-  'https://images.unsplash.com/photo-1544787219-7fcc4543207f?w=400&q=80',
-  'https://images.unsplash.com/photo-1600334089648-c57c76b226e6?w=400&q=80',
-]
 
 const SERVICES = [
   {
     title: 'Класически масаж',
-    description: 'Подходящ за отпускане и облекчаване на напрежените мускули. Персонализиран според вашите нужди.',
-    price60: '50 € (98 лв)',
-    price90: '70 € (138 лв)',
-    image: SERVICE_IMAGES[0],
+    description: 'Когато не сте сигурни какво точно искате, класическият масаж е сигурен избор.',
+    pricing: ['60 минути - 50 € (98 лв)', '90 минути - 70 € (138 лв)'],
+    image: '/Classic Massage.jpg',
   },
   {
     title: 'Дълбокотъканен масаж',
-    description: 'Силов масаж, съобразен с вашето състояние. Работи по дълбоките слоеве на мускулатурата.',
-    price60: '50 € (98 лв)',
-    price90: '70 € (138 лв)',
-    image: SERVICE_IMAGES[1],
+    description: 'Дълбокотъканният масаж е високоефективна терапия, която помага да се постигне дълбоко релаксиране на мускулите и да се намали напрежението в тялото. Силов масаж съобразен с моментното състояние на тялото.',
+    pricing: ['60 минути - 65 € (128 лв)', '90 минути - 85 € (168 лв)'],
+    image: '/Deep Tissue massage.jpg',
   },
   {
     title: 'Ломи Ломи - релаксиращ',
-    description: 'Хавайски масаж за пълно отпускане и възстановяване на енергията.',
-    price60: '60 € (118 лв)',
-    price90: '85 € (167 лв)',
-    image: SERVICE_IMAGES[2],
+    description: 'Масажът Ломи-Ломи е изключително релаксиращ и терапевтичен вид масаж, който произлиза от традиционната хавайска култура. Той е известен със своите кръгови, ритмични движения, които имитират вълните на океана и са направени за да се отпуснат мускулите и да се намали стресът в тялото.',
+    pricing: ['60 минути - 50 € (98 лв)', '90 минути - 70 € (138 лв)'],
+    image: '/Lomi Lomi.jpg',
   },
   {
     title: 'Частичен масаж - гръб',
-    description: 'Фокусиран масаж на гръб и рамене. Идеален при напрежение и болки.',
-    price60: '35 € (69 лв)',
-    price90: '—',
-    image: SERVICE_IMAGES[3],
+    description: 'Когато усещате, че гърба Ви е претоварен и искате да му се обърне специално внимание.',
+    pricing: ['40 минути - 35 € (68 лв)'],
+    image: '/Back Massage.jpg',
+  },
+  {
+    title: 'Рефлексотерапия - частичен',
+    description: 'Рефлексотерапията на стъпалата е една от най-ефективните форми на рефлексотерапия. Тази техника се базира на идеята, че на стъпалата има точки, които са свързани с определени органи и системи в тялото. Когато тези точки се стимулират правилно, те могат да подобрят функционирането на тези органи и системи.',
+    pricing: ['40 минути - 35 € (68 лв)'],
+    image: '/Reflexology.jpg',
+  },
+  {
+    title: 'Антицелулитен масаж - ръчен',
+    description: 'Антицелулитният масаж е една от най-ефективните техники за борба с целулита. Този вид масаж е специално проектиран, за да насърчи кръвообращението в зоните, където има целулит, като се използват различни техники за масажиране и стимулиране на тъканите.',
+    pricing: ['40 минути - 35 € (68 лв)'],
+    image: '/anitcellulite.jpg',
+  },
+  {
+    title: 'Спортен масаж',
+    description: 'Спортният масаж е техника за релаксация и възстановяване след физическо натоварване. Използва се за подобряване на кръвообращението, намаляване на мускулната напрежение и подпомагане на зарастването на тъканите.',
+    pricing: ['60 минути - 65 € (128 лв)', '90 минути - 85 € (168 лв)'],
+    image: '/Sport massage.jpg',
+  },
+  {
+    title: 'Антицелулитен масаж - пакет 10 процедури',
+    description: 'Антицелулитният масаж е една от най-ефективните техники за борба с целулита. Този вид масаж е специално проектиран, за да насърчи кръвообращението в зоните, където има целулит, като се използват различни техники за масажиране и стимулиране на тъканите.',
+    pricing: ['10 процедури - 295 € (600 лв)'],
+    image: '/anitcellulite.jpg',
   },
 ]
 
@@ -111,10 +125,10 @@ export default function HomePage() {
           <p className="text-center text-gray-600 mb-10">
             Всички масажи се предлагат на място в уюта на собствения Ви дом.
           </p>
-          <div className="grid sm:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((s, i) => (
-              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col sm:flex-row">
-                <div className="relative w-full sm:w-40 h-48 sm:h-auto sm:min-h-[200px] flex-shrink-0">
+              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col">
+                <div className="relative w-full aspect-[4/3] flex-shrink-0">
                   <Image
                     src={s.image}
                     alt={s.title}
@@ -126,10 +140,11 @@ export default function HomePage() {
                 <div className="p-4 flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">{s.title}</h3>
                   <p className="text-sm text-gray-600 mb-3">{s.description}</p>
-                  <p className="text-sm text-primary-700">
-                    60 минути – {s.price60}
-                    {s.price90 !== '—' && <><br />90 минути – {s.price90}</>}
-                  </p>
+                  <div className="text-sm text-primary-700 space-y-0.5">
+                    {s.pricing.map((line, j) => (
+                      <p key={j}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

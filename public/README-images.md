@@ -1,8 +1,25 @@
 # Снимки за сайта
 
-За да сложиш свои снимки вместо placeholder-ите:
+Сложи файловете в папката `public/`.
 
-1. **Hero (главна снимка)** – сложи `hero.jpg` в тази папка (`public/`). В `app/page.tsx` смени `HERO_IMAGE` на `/hero.jpg`.
-2. **За мен (твоя снимка)** – сложи `about.jpg` в `public/`. В `app/page.tsx` смени `ABOUT_IMAGE` на `/about.jpg`.
+## Услуги (задължителни имена за съвпадение с описанията)
 
-Поддържат се формати: JPG, PNG, WebP. Препоръчително: hero ~1200px ширина, about ~600px.
+| Файл в public/ | Услуга |
+|----------------|--------|
+| `klasicheski-masaj.jpg` | Класически масаж |
+| `dulbokotikanen-masaj.jpg` | Дълбокотъканен масаж |
+| `lomi-lomi.jpg` | Ломи Ломи - релаксиращ |
+| `chastichen-masaj-grab.jpg` | Частичен масаж - гръб |
+| `refleksoterapiya.jpg` | Рефлексотерапия - частичен |
+| `anticeluliten-masaj.jpg` | Антицелулитен масаж - ръчен |
+| `sporten-masaj.jpg` | Спортен масаж |
+| `anticeluliten-masaj-paket.jpg` | Антицелулитен масаж - пакет 10 процедури |
+
+Може да използваш и `.png` – тогава в `app/page.tsx` смени разширението в пътищата (напр. `/klasicheski-masaj.png`).
+
+## Други
+
+- **За мен:** вече се използва `about.jpg.png` (или преименувай на `about.jpg` и смени в кода).
+- **Hero:** в кода е зададен Unsplash URL; за своя снимка сложи `hero.jpg` в `public/` и смени `HERO_IMAGE` в `app/page.tsx` на `/hero.jpg`.
+
+Препоръчително: снимките за услуги ~800px ширина, формат JPG или WebP.
