@@ -216,9 +216,6 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2">Пишете ми</h2>
           <span className="block w-16 h-0.5 bg-primary-500 mb-6" aria-hidden />
-          <p className="text-gray-600 mb-8">
-            Тихомир Тодоров · 089 750 0190 · masajipodomovete@abv.bg
-          </p>
           <p className="text-gray-600 mb-6">
             Предпочитам да ме пишете в WhatsApp – отговарям по-бързо.
           </p>
@@ -235,7 +232,8 @@ export default function HomePage() {
           </div>
           <div>
             <p className="text-sm font-medium text-gray-500 mb-2">Директно</p>
-            <a href="tel:+359897500190" className="text-primary-600 hover:text-primary-700 font-medium block mb-1">
+            <a href="tel:+359897500190" className="inline-flex items-center gap-1.5 text-primary-600 hover:text-primary-700 font-medium mb-1">
+              <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               +359 897 500 190
             </a>
             <a href="mailto:masajipodomovete@abv.bg" className="text-primary-600 hover:text-primary-700 font-medium block">
