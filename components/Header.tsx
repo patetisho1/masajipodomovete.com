@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 const nav = [
   { label: 'За мен', href: '#za-men' },
+  { label: 'Моят подход', href: '#moyat-podhod' },
   { label: 'Услуги', href: '#uslugi' },
   { label: 'Отзиви', href: '#otzivi' },
   { label: 'Контакти', href: '#kontakti' },

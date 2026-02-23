@@ -113,6 +113,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Моят подход */}
+      <section id="moyat-podhod" className="py-16 px-4 scroll-mt-20 bg-[#f5ede4]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2 text-center">Моят подход</h2>
+          <span className="block w-16 h-0.5 bg-primary-500 mx-auto mb-10" aria-hidden />
+          <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <p className="text-gray-700 mb-4">Най-релаксиращата атмосфера е у дома.</p>
+              <p className="text-gray-700 mb-4">За 5 минути ще превърна вашето жилище в уютен спа салон.</p>
+              <p className="text-gray-700">Професинална масажна кушетка, свежи чаршафи, меки хавлии, уханни масла и тиха музика ще спрат времето за час.</p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src="/moyat-podhod.jpg"
+                alt="Масажна обстановка у дома"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+          <div className="text-center">
+            <a
+              href="#uslugi"
+              className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition"
+            >
+              Услуги
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Услуги – светла бежова лента със заглавие */}
       <section className="py-10 px-4 bg-[#f5ede4]">
         <div className="max-w-4xl mx-auto text-center">
