@@ -159,21 +159,19 @@ export default function HomePage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-6">
             {SERVICES.map((s, i) => (
-              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-row">
-                <div className="relative w-36 sm:w-40 h-36 sm:h-44 flex-shrink-0">
+              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col sm:flex-row">
+                <div className="relative w-full sm:w-40 h-44 sm:h-44 flex-shrink-0">
                   <Image
                     src={s.image}
                     alt={s.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 144px, 160px"
+                    sizes="(max-width: 640px) 100vw, 160px"
                   />
                 </div>
-                <div className="p-4 flex-1 flex flex-col min-w-0">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 mb-1">{s.title}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-4">{s.description}</p>
-                  </div>
+                <div className="p-4 flex-1 flex flex-col min-w-0 text-left">
+                  <h3 className="font-semibold text-gray-900 mb-1">{s.title}</h3>
+                  <p className="text-sm text-gray-600 line-clamp-4">{s.description}</p>
                   <div className="mt-2 pt-2 border-t border-gray-200 text-sm text-primary-700 space-y-0.5">
                     {s.pricing.map((line, j) => (
                       <p key={j}>{line}</p>
