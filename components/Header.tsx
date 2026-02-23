@@ -16,18 +16,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
-      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          {/* Лого – абстрактна овална форма с линия (като от референса) */}
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center">
-            <span className="w-6 h-0.5 bg-gray-400 rounded-full" aria-hidden />
-          </div>
-          <div>
-            <Link href="/" className="block font-serif text-xl text-gray-900 hover:text-primary-600">
-              Масажи по домовете
-            </Link>
-            <p className="text-sm font-serif text-gray-600">Massage Therapist</p>
-          </div>
+      <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+        <div>
+          <Link href="/" className="block font-serif text-xl text-gray-900 hover:text-primary-600">
+            Масажи по домовете
+          </Link>
+          <p className="text-sm font-serif text-gray-600">Massage Therapist</p>
         </div>
 
         <div className="hidden sm:flex flex-col items-end gap-1">
