@@ -16,17 +16,22 @@ const lora = Lora({
   variable: '--font-lora',
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://www.masajipodomovete.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://masajipodomovete.com'),
-  title: 'Масажи по домовете | София и област',
-  description: 'Професионален масаж у вас вкъщи. Тихомир Тодоров – лицензиран масажист с над 10 години опит. София и област.',
-  keywords: 'масаж софия, масаж по домовете, масажист софия, класически масаж, дълбокотъканен масаж',
+  metadataBase: new URL(siteUrl),
+  title: 'Масажи по домовете София | Професионален масаж у дома – Тихомир Тодоров',
+  description: 'Масаж в София и област у вас вкъщи. Класически, дълбокотъканен, Ломи Ломи, рефлексотерапия. Лицензиран масажист с над 10 години опит. Обадете се за час.',
+  keywords: 'масаж софия, масаж по домовете, масажист софия, масаж у дома софия, класически масаж, дълбокотъканен масаж, релаксиращ масаж',
   viewport: { width: 'device-width', initialScale: 1, maximumScale: 5 },
   themeColor: '#4a684c',
+  alternates: { canonical: siteUrl },
   openGraph: {
-    title: 'Масажи по домовете | София и област',
-    description: 'Професионален масаж у вас вкъщи. Тихомир Тодоров – над 10 години опит.',
+    title: 'Масажи по домовете София | Масаж у дома',
+    description: 'Професионален масаж у вас вкъщи в София и област. Тихомир Тодоров – над 10 години опит.',
+    url: siteUrl,
     locale: 'bg_BG',
+    type: 'website',
   },
 }
 
@@ -35,9 +40,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Масажи по домовете – Тихомир Тодоров',
+    description: 'Професионален масаж у дома в София и област. Класически, дълбокотъканен, Ломи Ломи, рефлексотерапия и др.',
+    url: siteUrl,
+    telephone: '+359897500190',
+    email: 'masajipodomovete@abv.bg',
+    areaServed: { '@type': 'City', name: 'София', containedInPlace: { '@type': 'Country', name: 'България' } },
+    priceRange: '€€',
+    image: `${siteUrl}/background.jpg`,
+    sameAs: ['https://www.facebook.com/masajipodomovete'],
+  }
+
   return (
     <html lang="bg" className={`${inter.variable} ${lora.variable}`}>
       <body className={inter.className}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Header />
         <main>{children}</main>
         <Footer />
