@@ -70,12 +70,15 @@ export default function HomePage() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-white/30 z-10" />
+          <div className="absolute inset-0 bg-primary-900/25 z-10" />
         </div>
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-700 mb-2">
             Relax, Refresh, Revitalize
           </h1>
+          <p className="font-serif text-lg sm:text-xl text-primary-800/95 mb-3">
+            Професионален масаж в уюта на вашия дом
+          </p>
           <span className="block w-48 h-0.5 bg-primary-600 mx-auto" aria-hidden />
         </div>
       </section>
@@ -86,7 +89,7 @@ export default function HomePage() {
           <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 text-center mb-2">За мен</h2>
           <span className="block w-24 h-px bg-primary-500/70 mx-auto mb-10 rounded-full" aria-hidden />
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-100 ring-2 ring-white shadow-md">
+            <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-100 ring-2 ring-white shadow-md transition-transform duration-300 hover:scale-[1.02]">
               <Image
                 src={ABOUT_IMAGE}
                 alt="Тихомир Тодоров – масажист"
@@ -101,7 +104,7 @@ export default function HomePage() {
               </p>
               <a
                 href="#uslugi"
-                className="inline-block bg-primary-600 text-white px-5 py-2.5 rounded font-medium hover:bg-primary-700 transition"
+                className="inline-block bg-primary-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-primary-700 hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
               >
                 Още
               </a>
@@ -134,7 +137,7 @@ export default function HomePage() {
           <div className="text-center">
             <a
               href="#uslugi"
-              className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition"
+              className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               Услуги
             </a>
@@ -158,13 +161,13 @@ export default function HomePage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-6">
             {SERVICES.map((s, i) => (
-              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col sm:flex-row">
-                <div className="relative w-full sm:w-40 h-44 sm:h-44 flex-shrink-0">
+              <div key={i} className="group bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col sm:flex-row transition-shadow duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-primary-200">
+                <div className="relative w-full sm:w-40 h-44 sm:h-44 flex-shrink-0 overflow-hidden">
                   <Image
                     src={s.image}
                     alt={s.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, 160px"
                   />
                 </div>
@@ -193,16 +196,16 @@ export default function HomePage() {
           <span className="block w-16 h-0.5 bg-primary-500 mx-auto mb-10" aria-hidden />
           <div className="grid sm:grid-cols-3 gap-6">
             <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
-              <p className="text-gray-700 text-sm">Масажът беше прекрасен. И най-хубавото е, че не трябва да пътувам до вкъщи.</p>
-              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Адриана</cite>
+              <p className="text-gray-600 text-sm leading-relaxed">Масажът беше прекрасен. И най-хубавото е, че не трябва да пътувам до вкъщи.</p>
+              <cite className="block mt-3 font-medium text-primary-700 not-italic text-sm">— Адриана</cite>
             </blockquote>
             <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
-              <p className="text-gray-700 text-sm">Дълбокотъканният масаж, въпреки че е силов, беше съобразен с мен и моментното ми състояние. Благодаря, Тишо.</p>
-              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Стоян</cite>
+              <p className="text-gray-600 text-sm leading-relaxed">Дълбокотъканният масаж, въпреки че е силов, беше съобразен с мен и моментното ми състояние. Благодаря, Тишо.</p>
+              <cite className="block mt-3 font-medium text-primary-700 not-italic text-sm">— Стоян</cite>
             </blockquote>
             <blockquote className="bg-white/80 rounded-lg p-5 border border-gray-100 text-center">
-              <p className="text-gray-700 text-sm">Ломи-Ломи е вече любимият ми масаж.</p>
-              <cite className="block mt-3 text-gray-500 not-italic text-sm">— Светла</cite>
+              <p className="text-gray-600 text-sm leading-relaxed">Ломи-Ломи е вече любимият ми масаж.</p>
+              <cite className="block mt-3 font-medium text-primary-700 not-italic text-sm">— Светла</cite>
             </blockquote>
           </div>
         </div>
@@ -224,10 +227,10 @@ export default function HomePage() {
               href="https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20запазя%20масаж."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               <WhatsAppIcon className="w-5 h-5" />
-              WhatsApp
+              Пишете в WhatsApp
             </a>
           </div>
           <div>

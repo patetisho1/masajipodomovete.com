@@ -11,6 +11,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Достъпност: видим фокус за клавиатурна навигация */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-primary);
+}
+
 body {
   @apply antialiased text-gray-800 bg-white relative;
 }
