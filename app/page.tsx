@@ -222,7 +222,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             <a
-              href="https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20се%20свържа%20за%20масаж."
+              href="https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20запазя%20масаж."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 transition"

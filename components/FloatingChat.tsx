@@ -2,7 +2,7 @@
 
 import { WhatsAppIcon } from '@/components/MessengerIcons'
 
-const WHATSAPP_URL = 'https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20се%20свържа%20за%20масаж.'
+const WHATSAPP_URL = 'https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20запазя%20масаж.'
 
 export default function FloatingChat() {
   return (
