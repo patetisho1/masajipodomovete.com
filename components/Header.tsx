@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-warm-50/95 backdrop-blur border-b border-warm-200">
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-lg font-semibold text-primary-600 hover:text-primary-700">
           Масажи по домовете
@@ -56,7 +56,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="sm:hidden border-t border-gray-100 bg-white px-4 py-3 flex flex-col gap-2">
+        <div className="sm:hidden border-t border-warm-200 bg-warm-50 px-4 py-3 flex flex-col gap-2">
           {nav.map((item) => (
             <a
               key={item.href}

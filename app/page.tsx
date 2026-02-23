@@ -1,57 +1,84 @@
+import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
+
+// Placeholder снимки – замени с твои в public/ (hero.jpg, about.jpg) или смени URL-ите по-долу
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1544161515-4ab6f6dd59ad?w=1200&q=80'
+const ABOUT_IMAGE = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80'
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative py-16 sm:py-24 px-4 bg-gradient-to-b from-primary-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-primary-600 font-medium mb-2">Massage Therapist</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      {/* Hero със снимка */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={HERO_IMAGE}
+            alt="Масаж у дома"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/40 z-10" />
+        </div>
+        <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
+          <p className="text-primary-200 font-medium mb-2">Massage Therapist</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 drop-shadow">
             Relax, Refresh, Revitalize
           </h1>
-          <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-xl mx-auto drop-shadow">
             Професионален масаж у вас вкъщи. София и област.
           </p>
           <a
             href="#kontakti"
-            className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition"
+            className="inline-block bg-primary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition shadow-lg"
           >
             Запазете час
           </a>
         </div>
       </section>
 
-      {/* За мен */}
-      <section id="za-men" className="py-16 px-4 scroll-mt-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">За мен</h2>
-          <div className="prose prose-lg text-gray-600 max-w-none">
-            <p className="font-semibold text-gray-900">Тихомир Тодоров</p>
-            <p className="text-primary-600 font-medium">Licensed Massage Therapist</p>
-            <p>Професионалист с над 10 години опит.</p>
+      {/* За мен със снимка */}
+      <section id="za-men" className="py-16 px-4 scroll-mt-20 bg-warm-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">За мен</h2>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-warm-200">
+              <Image
+                src={ABOUT_IMAGE}
+                alt="Тихомир Тодоров – масажист"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="prose prose-lg text-gray-700">
+              <p className="font-semibold text-gray-900 text-xl">Тихомир Тодоров</p>
+              <p className="text-primary-600 font-medium">Licensed Massage Therapist</p>
+              <p>Професионалист с над 10 години опит.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Услуги */}
-      <section id="uslugi" className="py-16 px-4 bg-gray-50 scroll-mt-20">
+      <section id="uslugi" className="py-16 px-4 bg-white scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Услуги</h2>
           <div className="space-y-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-warm-50 rounded-xl p-6 border border-warm-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Класически масаж</h3>
               <p className="text-gray-600">
                 Подходящ за отпускане и облекчаване на напрежените мускули. Персонализиран според вашите нужди.
               </p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-warm-50 rounded-xl p-6 border border-warm-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Дълбокотъканен масаж</h3>
               <p className="text-gray-600">
                 Силов масаж, съобразен с вашето състояние. Работи по дълбоките слоеве на мускулатурата.
               </p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-warm-50 rounded-xl p-6 border border-warm-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Ломи-Ломи</h3>
               <p className="text-gray-600">
                 Хавайски масаж за пълно отпускане и възстановяване на енергията.
@@ -66,7 +93,7 @@ export default function HomePage() {
       </section>
 
       {/* Отзиви */}
-      <section id="otzivi" className="py-16 px-4 scroll-mt-20">
+      <section id="otzivi" className="py-16 px-4 bg-warm-50 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Отзиви</h2>
           <div className="space-y-8">
@@ -87,7 +114,7 @@ export default function HomePage() {
       </section>
 
       {/* Контакти */}
-      <section id="kontakti" className="py-16 px-4 bg-gray-50 scroll-mt-20">
+      <section id="kontakti" className="py-16 px-4 bg-white scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Пишете ми</h2>
           <p className="text-gray-600 mb-8">
