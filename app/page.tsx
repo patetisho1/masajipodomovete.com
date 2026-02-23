@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
+import { WhatsAppIcon, ViberIcon } from '@/components/MessengerIcons'
 
 // Снимки: hero и услуги – URL-и по-долу; За мен – твоята снимка от public/about.jpg
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1519823551278-64ac92754fb2?w=1200&q=80'
@@ -168,6 +169,29 @@ export default function HomePage() {
           <p className="text-gray-600 mb-8">
             Тихомир Тодоров · 089 750 0190 · masajipodomovete@abv.bg
           </p>
+          <p className="text-gray-600 mb-6">
+            Предпочитам да ме пишете в WhatsApp или Viber – отговарям по-бързо.
+          </p>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <a
+              href="https://wa.me/359897500190?text=Здравейте%2C%20искам%20да%20се%20свържа%20за%20масаж."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 transition"
+            >
+              <WhatsAppIcon className="w-5 h-5" />
+              WhatsApp
+            </a>
+            <a
+              href="https://viber.com/contact?number=359897500190"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#7360f2] text-white px-5 py-3 rounded-lg font-medium hover:opacity-90 transition"
+            >
+              <ViberIcon className="w-5 h-5" />
+              Viber
+            </a>
+          </div>
           <div className="grid sm:grid-cols-2 gap-8">
             <div>
               <p className="text-sm font-medium text-gray-500 mb-2">Директно</p>

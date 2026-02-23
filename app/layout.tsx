@@ -3,6 +3,7 @@ import { Inter, Lora } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingChat from '@/components/FloatingChat'
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingChat />
       </body>
     </html>
   )
