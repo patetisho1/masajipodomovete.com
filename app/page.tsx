@@ -125,22 +125,24 @@ export default function HomePage() {
           <p className="text-center text-gray-600 mb-10">
             Всички масажи се предлагат на място в уюта на собствения Ви дом.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             {SERVICES.map((s, i) => (
-              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-col">
-                <div className="relative w-full aspect-[4/3] flex-shrink-0">
+              <div key={i} className="bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex flex-row">
+                <div className="relative w-36 sm:w-40 h-36 sm:h-44 flex-shrink-0">
                   <Image
                     src={s.image}
                     alt={s.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 200px"
+                    sizes="(max-width: 640px) 144px, 160px"
                   />
                 </div>
-                <div className="p-4 flex-1">
-                  <h3 className="font-semibold text-gray-900 mb-2">{s.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{s.description}</p>
-                  <div className="text-sm text-primary-700 space-y-0.5">
+                <div className="p-4 flex-1 flex flex-col min-w-0">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-1">{s.title}</h3>
+                    <p className="text-sm text-gray-600 line-clamp-4">{s.description}</p>
+                  </div>
+                  <div className="mt-2 pt-2 border-t border-gray-200 text-sm text-primary-700 space-y-0.5">
                     {s.pricing.map((line, j) => (
                       <p key={j}>{line}</p>
                     ))}
