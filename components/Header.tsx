@@ -16,12 +16,27 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
       <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
-        <div>
-          <Link href="/" className="block font-serif text-xl text-gray-900 hover:text-primary-600">
-            Масажи по домовете
-          </Link>
-          <p className="text-sm font-serif text-gray-600">Massage Therapist</p>
-        </div>
+        <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition">
+          <svg
+            className="flex-shrink-0 w-10 h-6 text-gray-800"
+            viewBox="0 0 40 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            {/* Овал – ръчно, несиметричен: леко по-плосък отгоре-вляво, по-закръглен долу-вдясно */}
+            <path d="M 6.5 12 C 6.5 6 12 3.5 20 4 C 28 4.5 33.5 6.5 33.5 12 C 33.5 17.5 28 20 20 20.5 C 12 21 6.5 18 6.5 12 Z" />
+            {/* Линия – леко неравна, като от перо */}
+            <path d="M 5 12.2 L 14 11.7 L 22 12.1 L 30 11.8 L 36 12" />
+          </svg>
+          <div>
+            <span className="block font-serif text-xl text-gray-900">Масажи по домовете</span>
+            <span className="block text-sm font-serif text-gray-600">Massage Therapist</span>
+          </div>
+        </Link>
 
         <div className="hidden sm:flex flex-col items-end gap-1">
           <a
