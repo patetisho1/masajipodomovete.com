@@ -81,11 +81,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* За мен – портрет, текст, бутон Още */}
-      <section id="za-men" className="py-16 px-4 scroll-mt-20 bg-white">
+      {/* За мен – светла бежова лента, центрирано заглавие, снимка вляво, текст в бяла кутия вдясно */}
+      <section id="za-men" className="py-16 px-4 scroll-mt-20 bg-[#f5ede4]">
         <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 text-center mb-2">За мен</h2>
+          <span className="block w-24 h-px bg-primary-500/70 mx-auto mb-10 rounded-full" aria-hidden />
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-100">
+            <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-100 ring-2 ring-white shadow-md">
               <Image
                 src={ABOUT_IMAGE}
                 alt="Тихомир Тодоров – масажист"
@@ -94,12 +96,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2">За мен</h2>
-              <span className="block w-16 h-0.5 bg-primary-500 mb-6" aria-hidden />
-              <p className="text-xl font-semibold text-gray-900">Тихомир Тодоров</p>
-              <p className="text-gray-600 mb-4">Licensed Massage Therapist</p>
-              <p className="text-gray-700 mb-6">
+            <div className="bg-white rounded-sm border border-gray-200 shadow-sm p-6 sm:p-8">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 Здравейте, казвам се Тихомир и се занимавам професионално с масажи повече от 10 години. Обичам работата си и никога не правя компромис с качеството. От масажните масла, до музиката по време на масажа.
               </p>
               <a

@@ -17,14 +17,20 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div>
-          <Link href="/" className="block text-lg font-semibold text-gray-900 hover:text-primary-600">
-            Масажи по домовете
-          </Link>
-          <p className="text-sm text-gray-500">Massage Therapist</p>
+        <div className="flex items-center gap-3">
+          {/* Лого – абстрактна овална форма с линия (като от референса) */}
+          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center">
+            <span className="w-6 h-0.5 bg-gray-400 rounded-full" aria-hidden />
+          </div>
+          <div>
+            <Link href="/" className="block font-serif text-xl text-gray-900 hover:text-primary-600">
+              Масажи по домовете
+            </Link>
+            <p className="text-sm font-serif text-gray-600">Massage Therapist</p>
+          </div>
         </div>
 
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden sm:flex flex-col items-end gap-1">
           <a
             href="https://www.facebook.com/masajipodomovete"
             target="_blank"
@@ -39,13 +45,13 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 transition"
+                className="text-gray-700 hover:text-primary-600 transition text-sm"
               >
                 {item.label}
               </a>
             ))}
           </nav>
-          <a href="tel:+359897500190" className="text-gray-900 font-medium">
+          <a href="tel:+359897500190" className="text-gray-900 font-medium text-sm">
             +359 897 500 190
           </a>
         </div>
