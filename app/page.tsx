@@ -98,8 +98,10 @@ export default function HomePage() {
               <h2 className="font-serif text-2xl sm:text-3xl text-primary-700 mb-2">За мен</h2>
               <span className="block w-16 h-0.5 bg-primary-500 mb-6" aria-hidden />
               <p className="text-xl font-semibold text-gray-900">Тихомир Тодоров</p>
-              <p className="text-gray-600 mb-2">Licensed Massage Therapist</p>
-              <p className="text-gray-700 mb-6">Професионалист с над 10 години опит.</p>
+              <p className="text-gray-600 mb-4">Licensed Massage Therapist</p>
+              <p className="text-gray-700 mb-6">
+                Здравейте, казвам се Тихомир и се занимавам професионално с масажи повече от 10 години. Обичам работата си и никога не правя компромис с качеството. От масажните масла, до музиката по време на масажа.
+              </p>
               <a
                 href="#uslugi"
                 className="inline-block bg-primary-600 text-white px-5 py-2.5 rounded font-medium hover:bg-primary-700 transition"
