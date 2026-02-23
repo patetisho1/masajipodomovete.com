@@ -180,10 +180,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <blockquote className="mt-10 pl-4 border-l-4 border-primary-500 text-gray-600 italic">
-            „Масажът беше прекрасен. И най-хубавото е, че не трябва да пътувам до вкъщи.“
-            <cite className="block mt-2 not-italic text-gray-500">— Адриана</cite>
-          </blockquote>
+          <p className="mt-10 text-center text-gray-600 max-w-2xl mx-auto">
+            Ние ще осигурим всичко необходимо за масажа. Професионална масажна маса, масажно масло, свежи чаршафи, хавлия и дори музика за релаксираща атмосфера.
+          </p>
         </div>
       </section>
 
