@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingChat from '@/components/FloatingChat'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -57,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="bg" className={`${inter.variable} ${lora.variable}`}>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Header />
         <main>{children}</main>
