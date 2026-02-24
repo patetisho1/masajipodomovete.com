@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import TrackedLink from '@/components/TrackedLink'
 
 const nav = [
   { label: 'За мен', href: '#za-men' },
@@ -42,10 +43,10 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <a href="tel:+359897500190" className="inline-flex items-center gap-1.5 text-gray-900 font-medium text-sm">
+          <TrackedLink href="tel:+359897500190" eventName="click_phone" eventParams={{ location: 'header' }} className="inline-flex items-center gap-1.5 text-gray-900 font-medium text-sm">
             <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             +359 897 500 190
-          </a>
+          </TrackedLink>
         </div>
 
         <button
@@ -76,10 +77,10 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          <a href="tel:+359897500190" className="py-2 inline-flex items-center gap-1.5 text-primary-600 font-medium">
+          <TrackedLink href="tel:+359897500190" eventName="click_phone" eventParams={{ location: 'header_mobile' }} onClick={() => setOpen(false)} className="py-2 inline-flex items-center gap-1.5 text-primary-600 font-medium">
             <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             +359 897 500 190
-          </a>
+          </TrackedLink>
         </div>
       )}
     </header>
